@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Job Application Form 1</title>
+    </head>
+  <body>
+       <header>
+        <h1 id="title">Application Form</h1>
+        <p id="description">Complete our survey form to apply for our software engineering position and share your education, work experience, technical skills, project experience and more.</p>
+       </header> 
+        
+       <form id="survey-form" action="#" method="POST">
+            <!-- PERSONAL INFORMATION -->
+            <fieldset class="personalinf">
+                <legend>Personal Information</legend>
+                <div class="form-input">
+                    <label for="name" class="categorie" id="name-label">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Write your name">
+                </div>
+                <div class="form-input">
+                    <label for="number" class="categorie" id="number-label">Age (in years):</label>
+                    <input id="number" name="age" type="number" required pattern="\d+" title="Please enter your age" min="1" max="120" placeholder="Write your age">
+                </div>
+                <div class="form-input">
+                    <label for="email" class="categorie" id="email-label">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Write your email">
+                </div>
+                
+
+                    <div class="form-input" id="gender">
+                        <label class="categorie" for="gender">Gender:</label>
+                        <div class="radio-options">
+                            <input id="male" name="gender" type="radio" value="male" required>
+                            <label for="male">Male</label>
+                            <input id="female" name="gender" type="radio" value="female" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                <div class="form-input">
+                    <label for="phone" class="categorie" >Phone Number:</label>
+                    <input id="phone" name="phone" type="tel" pattern="^\+(?:[0-9]●?){6,14}[0-9]$" required placeholder="International format">
+                </div>
+            </fieldset>
+    
+            <!-- PROFESSIONAL INFORMATION -->
+            <fieldset>
+                <legend>Work Experience and Education</legend>
+        
+                <div class="form-input">
+                    <label class="categorie" for="education">Education:</label>
+                    <select id="dropdown" name="education" required>
+                        <option value="">Choose one</option>
+                        <option value="college">College degree</option>
+                        <option value="highschool">High school diploma</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>    
+                <div class="form-input">
+                    <!-- CHECKBOX -->
+                    <label class="categorie">Which of the following skills/languages do you master?</label>
+                        <label for="js" class="check-option"><input id="js" name="skills[]" type="checkbox" value="js">Js</label>
+                        
+                        <label for="react" class="check-option"><input id="react" name="skills[]" type="checkbox" value="react">React</label>
+                       
+                        <label for="python" class="check-option"> <input id="python" name="skills[]" type="checkbox" value="python">Python</label>
+                        
+                        <label for="bootstrap" class="check-option"><input id="bootstrap" name="skills[]" type="checkbox" value="bootstrap">Bootstrap</label>
+                        
+                        <label for="data-science" class="check-option"><input id="data-science" name="skills[]" type="checkbox" value="data-science">Data Science</label> 
+                </div>
+                <div class="form-input">
+                    <label for="reason" class="categorie">Tell us why you deserve this job:</label>
+                    <textarea id="reason" name="reason" rows="5" cols="30" placeholder="I think I would be great for this position..."></textarea>
+                </div>
+                <div class="form-input">
+                    <!-- SUBMIT BUTTON -->
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </fieldset>
+    </form>
+
+   
+  </body>
+</html>
